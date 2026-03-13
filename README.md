@@ -33,13 +33,17 @@ No optimisation-first architecture.
 ## Architecture
 
 ```
-signal / request
+environment
        ↓
- translation layer
+ signal
        ↓
- admissibility gate          ← pre-execution boundary
+ interpretation proposal    ← meaning construction boundary
        ↓
- authority gate              ← commit boundary
+ interpretation admissibility   ← pre-verdict gate
+       ↓
+ admissibility gate         ← pre-execution boundary
+       ↓
+ authority gate             ← commit boundary
        ↓
  execution boundary
        ↓
@@ -55,6 +59,13 @@ Every layer is fail-closed: if a gate cannot determine admissibility, execution 
 ## Repository Architecture
 
 The repositories below form a coherent control layer stack.
+
+---
+
+### 🔬 [interpretation-boundary-lab](https://github.com/LalaSkye/interpretation-boundary-lab)
+Deterministic admissibility layer for interpretation proposals. 10 named rules, closed graph topology, pressure-activated sector rotation, meaning drift replay.
+
+**Layer:** Interpretation admissibility — gates meaning construction before verdict and execution. Evaluates whether the interpretation that produced a candidate action is itself admissible.
 
 ---
 
@@ -117,6 +128,7 @@ These terms are used consistently across all repositories:
 | **commit boundary** | The point at which a decision becomes irreversible |
 | **authority gate** | A check that execution has explicit, evidence-backed permission |
 | **pre-execution admissibility** | Filtering inputs before they reach the execution boundary |
+| **interpretation admissibility** | Gating whether meaning construction is structurally sound before it reaches verdict |
 | **fail-closed control** | If a gate cannot decide, execution does not proceed |
 
 ---
@@ -144,6 +156,7 @@ These terms are used consistently across all repositories:
 
 ## Current Focus
 
+- Interpretation admissibility layers  
 - Pre-execution admissibility layers  
 - Halt-first AI architecture  
 - Deterministic control in large model environments  
