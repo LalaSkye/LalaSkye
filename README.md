@@ -30,52 +30,94 @@ No optimisation-first architecture.
 
 ---
 
+## Architecture
+
+```
+signal / request
+       ↓
+ translation layer
+       ↓
+ admissibility gate          ← pre-execution boundary
+       ↓
+ authority gate              ← commit boundary
+       ↓
+ execution boundary
+       ↓
+ action
+       ↓
+ audit / evidence
+```
+
+Every layer is fail-closed: if a gate cannot determine admissibility, execution does not proceed.
+
+---
+
 ## Repository Architecture
 
 The repositories below form a coherent control layer stack.
 
 ---
 
-### 🛑 stop-machine  
+### 🛑 [stop-machine](https://github.com/LalaSkye/stop-machine)
 Finite-state stop controller (GREEN → AMBER → RED).  
 RED is absorbing. Deterministic transitions. Fully tested.
 
-**Purpose:** Make "halt" a mechanical property of the system rather than a policy suggestion.
+**Layer:** Halt primitive — fail-closed control at the execution boundary.
 
 ---
 
-### 🔒 invariant-lock  
+### 🔒 [invariant-lock](https://github.com/LalaSkye/invariant-lock)
 Hash-based invariant locking for configuration and execution boundaries.
 
-**Purpose:** Prevent silent drift in systems that must remain stable over time.
+**Layer:** Drift prevention — fail-closed enforcement at the commit boundary.
 
 ---
 
-### 🧪 constraint-workshop  
-Public workbench of small deterministic control primitives.
+### 🧪 [constraint-workshop](https://github.com/LalaSkye/constraint-workshop)
+Public workbench of deterministic control primitives: stop machines, authority gates, commit gates, and invariant classifiers.
 
-**Purpose:** Publish the bricks, not the aircraft blueprint.
+**Layer:** Primitive composition — authority gate, commit boundary, and admissibility logic.
 
 ---
 
-### 📚 deterministic-lexicon  
+### ⚙️ [execution-boundary-lab](https://github.com/LalaSkye/execution-boundary-lab)
+Demonstrates how information pre-positioning causes cascading execution failures. Publishes the phenomenon and conformance tests. Gate implementation is private.
+
+**Layer:** Pre-execution admissibility — fail-closed gating before the commit boundary.
+
+---
+
+### 📚 [deterministic-lexicon](https://github.com/LalaSkye/deterministic-lexicon)
 Typed, versioned language primitives for reducing ambiguity in AI governance contexts.
 
-**Purpose:** Reduce interpretive drift by constraining vocabulary.
+**Layer:** Vocabulary control — exact terms, no inference, no drift.
 
 ---
 
-### 🧹 policy-lint  
+### 🧹 [policy-lint](https://github.com/LalaSkye/policy-lint)
 Static analysis for detecting ambiguity, missing halt semantics, and weak constraint definitions in policy text.
 
-**Purpose:** Make policy mechanically inspectable.
+**Layer:** Admissibility surface — makes governance claims mechanically inspectable.
 
 ---
 
-### ⚙ execution-boundary-lab  
-Experimental boundary-testing primitives exploring admissibility and explicit authority gates.
+### 📊 [csgr-lab](https://github.com/LalaSkye/csgr-lab)
+Contracted Stability & Drift Measurement for LLMs. Deterministic scoring, auditable evidence, reproducible runs.
 
-**Purpose:** Stress-test execution assumptions before deployment.
+**Layer:** Audit and evidence — tamper-evident hash chains for contract conformance.
+
+---
+
+## Canonical Vocabulary
+
+These terms are used consistently across all repositories:
+
+| Term | Meaning |
+|---|---|
+| **commit boundary** | The point at which a decision becomes irreversible |
+| **authority gate** | A check that execution has explicit, evidence-backed permission |
+| **pre-execution admissibility** | Filtering inputs before they reach the execution boundary |
+| **fail-closed control** | If a gate cannot decide, execution does not proceed |
 
 ---
 
