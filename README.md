@@ -1,32 +1,23 @@
-# 🧱 Ricky Jones
-**Constraint-First Systems Architect**  
-London, UK  
+# Ricky Jones
+
+**Constraint-First Systems Architect** | London, UK
 
 I design deterministic control primitives for AI systems.
 
-My work focuses on **pre-execution governance**: explicit authority, halt-first design, and minimising degrees of freedom before optimisation is introduced.
+My work focuses on **pre-execution governance**: explicit authority, halt-first design, and minimising degrees of freedom before optimisation is introduced. The core claim is that governance belongs *upstream* of action — at the interpretation layer — not downstream of execution.
 
-This profile contains small, auditable public primitives.  
+This profile contains small, auditable public primitives.
 Composition and orchestration logic remain private by design.
 
 ---
 
 ## Core Thesis
 
-**Governance begins before execution.**
+**Everyone else governs whether an action may execute. This work governs whether an interpretation may exist.**
 
-Most AI systems optimise first and constrain later.  
-I design systems where:
+Between a raw signal and an executed action, there is an interpretation step. That step introduces assumptions, collapses ambiguity, expands scope, and attributes intent. None of these operations are neutral. All of them can be tested against formal rules — *before any execution-layer question is even asked*.
 
-- Constraints are explicit  
-- Execution requires authority  
-- Halt is a structural capability  
-- Behaviour is deterministic  
-- Failure modes are defined in advance  
-
-No narrative compliance.  
-No hidden autonomy.  
-No optimisation-first architecture.
+Current field (Faramesh, Thinking OS, POLARIS) gates at the execution boundary. This work gates one full layer upstream: at meaning construction itself.
 
 ---
 
@@ -34,22 +25,26 @@ No optimisation-first architecture.
 
 ```
 environment
-       ↓
- signal
-       ↓
- interpretation proposal    ← meaning construction boundary
-       ↓
- interpretation admissibility   ← pre-verdict gate
-       ↓
- admissibility gate         ← pre-execution boundary
-       ↓
- authority gate             ← commit boundary
-       ↓
- execution boundary
-       ↓
- action
-       ↓
- audit / evidence
+       |
+signal
+       |
+interpretation proposal    <-- meaning construction boundary
+       |
+interpretation admissibility   <-- 10-rule upstream gate [interpretation-boundary-lab]
+       |
+  pressure monitoring          <-- 5 sources, 3 signal quality axes
+       |
+  C-sector rotation            <-- pressure-activated defensive geometry
+       |
+  state mutation gate          <-- downstream admissibility [dual-boundary-admissibility-lab]
+       |
+authority gate                 <-- commit boundary [constraint-workshop]
+       |
+execution boundary             <-- [execution-boundary-lab]
+       |
+action
+       |
+audit / evidence               <-- [csgr-lab]
 ```
 
 Every layer is fail-closed: if a gate cannot determine admissibility, execution does not proceed.
@@ -58,115 +53,65 @@ Every layer is fail-closed: if a gate cannot determine admissibility, execution 
 
 ## Repository Architecture
 
-The repositories below form a coherent control layer stack.
+### The Corridor
 
----
+| Repo | Layer | Tests | What It Does |
+|---|---|---|---|
+| [interpretation-boundary-lab](https://github.com/LalaSkye/interpretation-boundary-lab) | Upstream boundary | 81 | 10-rule admissibility gate for interpretation proposals |
+| [dual-boundary-admissibility-lab](https://github.com/LalaSkye/dual-boundary-admissibility-lab) | Full corridor | 261 | Dual-boundary model with pressure monitoring and C-sector rotation |
+| [execution-boundary-lab](https://github.com/LalaSkye/execution-boundary-lab) | Execution boundary | - | Demonstrates cascading failures without upstream governance |
 
-### 🔬 [interpretation-boundary-lab](https://github.com/LalaSkye/interpretation-boundary-lab)
-Deterministic admissibility layer for interpretation proposals. 10 named rules, closed graph topology, pressure-activated sector rotation, meaning drift replay.
+### Control Primitives
 
-**Layer:** Interpretation admissibility — gates meaning construction before verdict and execution. Evaluates whether the interpretation that produced a candidate action is itself admissible.
+| Repo | Layer | What It Does |
+|---|---|---|
+| [stop-machine](https://github.com/LalaSkye/stop-machine) | Halt primitive | Deterministic three-state stop controller. Once RED, nothing runs. |
+| [constraint-workshop](https://github.com/LalaSkye/constraint-workshop) | Primitive composition | Authority gate, invariant litmus, stop machine — composable bricks |
+| [invariant-lock](https://github.com/LalaSkye/invariant-lock) | Drift prevention | Refuse execution unless invariant version increments |
+| [deterministic-lexicon](https://github.com/LalaSkye/deterministic-lexicon) | Vocabulary | Fixed terms, exact matches, no inference |
+| [policy-lint](https://github.com/LalaSkye/policy-lint) | Policy validation | Deterministic linter for governance statements |
 
----
+### Measurement
 
-### 🛑 [stop-machine](https://github.com/LalaSkye/stop-machine)
-Finite-state stop controller (GREEN → AMBER → RED).  
-RED is absorbing. Deterministic transitions. Fully tested.
-
-**Layer:** Halt primitive — fail-closed control at the execution boundary.
-
----
-
-### 🔒 [invariant-lock](https://github.com/LalaSkye/invariant-lock)
-Hash-based invariant locking for configuration and execution boundaries.
-
-**Layer:** Drift prevention — fail-closed enforcement at the commit boundary.
-
----
-
-### 🧪 [constraint-workshop](https://github.com/LalaSkye/constraint-workshop)
-Public workbench of deterministic control primitives: stop machines, authority gates, commit gates, and invariant classifiers.
-
-**Layer:** Primitive composition — authority gate, commit boundary, and admissibility logic.
-
----
-
-### ⚙️ [execution-boundary-lab](https://github.com/LalaSkye/execution-boundary-lab)
-Demonstrates how information pre-positioning causes cascading execution failures. Publishes the phenomenon and conformance tests. Gate implementation is private.
-
-**Layer:** Pre-execution admissibility — fail-closed gating before the commit boundary.
-
----
-
-### 📚 [deterministic-lexicon](https://github.com/LalaSkye/deterministic-lexicon)
-Typed, versioned language primitives for reducing ambiguity in AI governance contexts.
-
-**Layer:** Vocabulary control — exact terms, no inference, no drift.
-
----
-
-### 🧹 [policy-lint](https://github.com/LalaSkye/policy-lint)
-Static analysis for detecting ambiguity, missing halt semantics, and weak constraint definitions in policy text.
-
-**Layer:** Admissibility surface — makes governance claims mechanically inspectable.
-
----
-
-### 📊 [csgr-lab](https://github.com/LalaSkye/csgr-lab)
-Contracted Stability & Drift Measurement for LLMs. Deterministic scoring, auditable evidence, reproducible runs.
-
-**Layer:** Audit and evidence — tamper-evident hash chains for contract conformance.
+| Repo | Layer | What It Does |
+|---|---|---|
+| [csgr-lab](https://github.com/LalaSkye/csgr-lab) | Audit / evidence | Contracted stability and drift measurement for LLMs |
 
 ---
 
 ## Canonical Vocabulary
 
-These terms are used consistently across all repositories:
-
 | Term | Meaning |
 |---|---|
+| **interpretation admissibility** | Gating whether meaning construction is structurally sound before it reaches verdict |
 | **commit boundary** | The point at which a decision becomes irreversible |
 | **authority gate** | A check that execution has explicit, evidence-backed permission |
-| **pre-execution admissibility** | Filtering inputs before they reach the execution boundary |
-| **interpretation admissibility** | Gating whether meaning construction is structurally sound before it reaches verdict |
 | **fail-closed control** | If a gate cannot decide, execution does not proceed |
+| **C-sector rotation** | Pressure-activated defensive geometry — interrupt vector rotates into control path |
 
 ---
 
 ## Design Principles
 
-- Determinism over optimisation  
-- Explicit authority required for execution  
-- Stop is a first-class primitive  
-- Shrink degrees of freedom before adding complexity  
-- Tests are mandatory  
-- Public artefacts do not expose private orchestration  
+- Determinism over optimisation
+- Explicit authority required for execution
+- Stop is a first-class primitive
+- Shrink degrees of freedom before adding complexity
+- Tests are mandatory
+- Public artefacts do not expose private orchestration
 
 ---
 
-## Research & Publications
+## Research and Publications
 
-📄 Zenodo:  
-[https://zenodo.org/search?q=ricky%20dean%20jones](https://zenodo.org/search?q=ricky%20dean%20jones)
-
-🔗 LinkedIn:  
-[https://linkedin.com/in/ricky-jones-1b745474](https://linkedin.com/in/ricky-jones-1b745474)
-
----
-
-## Current Focus
-
-- Interpretation admissibility layers  
-- Pre-execution admissibility layers  
-- Halt-first AI architecture  
-- Deterministic control in large model environments  
-- Structural governance beyond narrative compliance  
+Papers: [Zenodo](https://zenodo.org/search?q=ricky%20dean%20jones)
+LinkedIn: [linkedin.com/in/ricky-jones-1b745474](https://linkedin.com/in/ricky-jones-1b745474)
 
 ---
 
 ## Contribution Pattern
 
-Small, auditable tools.  
-Clear failure modes.  
-Minimal claims.  
+Small, auditable tools.
+Clear failure modes.
+Minimal claims.
 Running code over commentary.
