@@ -2,7 +2,9 @@
 
 **Constraint-First Systems Architect** | London, UK
 
-I design deterministic control primitives for AI systems.
+I build open-source tools that enforce governance rules on AI systems before they execute.
+
+If your AI pipeline has no checkpoint between "the model decided" and "the action ran", these tools fix that. They are small, deterministic, stdlib-only Python libraries — each under 200 lines, each independently testable, each fail-closed by default.
 
 My work focuses on **pre-execution governance**: explicit authority, halt-first design, and minimising degrees of freedom before optimisation is introduced. The core claim is that governance belongs *upstream* of action — at the interpretation layer — not downstream of execution.
 
@@ -106,6 +108,18 @@ Every layer is fail-closed: if a gate cannot determine admissibility, execution 
 
 Papers: [Zenodo](https://zenodo.org/search?q=ricky%20dean%20jones)
 LinkedIn: [linkedin.com/in/ricky-jones-1b745474](https://linkedin.com/in/ricky-jones-1b745474)
+
+---
+
+## Work With Me
+
+I consult on AI governance architecture, runtime constraint design, and EU AI Act compliance tooling.
+
+If your team is building AI systems that need deterministic governance, auditable policy enforcement, or compliant stop mechanisms — I can help.
+
+→ **ricky.mcjones@gmail.com**
+→ [LinkedIn](https://linkedin.com/in/ricky-jones-1b745474)
+→ [GitHub Sponsors](https://github.com/sponsors/LalaSkye)
 
 ---
 
