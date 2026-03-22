@@ -129,3 +129,15 @@ Small, auditable tools.
 Clear failure modes.
 Minimal claims.
 Running code over commentary.
+
+---
+
+## Authorship & Rights
+
+All architecture, methods, and system designs across this profile and its repositories are the original work of **Ricky Dean Jones** unless otherwise stated.
+No rights to use, reproduce, or implement are granted without explicit permission beyond the terms of each repository licence.
+
+**Author:** Ricky Dean Jones
+**GitHub:** [LalaSkye](https://github.com/LalaSkye)
+**Organisation:** Os-Trilogy LMT / AlvianTech
+**Status:** Active research / architecture work
