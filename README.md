@@ -13,13 +13,27 @@ Composition and orchestration logic remain private by design.
 
 ---
 
+## Start here
+
+**[commit-gate-core](https://github.com/LalaSkye/commit-gate-core)** — minimal Python reference implementation of execution-bound governance: no state mutation unless a signed, scoped, unexpired, unreplayed DecisionRecord authorises the exact commit.
+
+Everything else on this profile orbits that primitive.
+
+---
+
 ## Core Thesis
 
-**Everyone else governs whether an action may execute. This work governs whether an interpretation may exist.**
+**Much of the field focuses on whether an action may execute. My work also examines the earlier boundary where interpretation becomes admissible.**
 
 Between a raw signal and an executed action, there is an interpretation step. That step introduces assumptions, collapses ambiguity, expands scope, and attributes intent. None of these operations are neutral. All of them can be tested against formal rules — *before any execution-layer question is even asked*.
 
 Current field (Faramesh, Thinking OS, POLARIS) gates at the execution boundary. This work gates one full layer upstream: at meaning construction itself.
+
+---
+
+## Why follow
+
+Small, auditable Python primitives for AI governance: commit gates, stop machines, invariant locks, policy linting, replay resistance, and fail-closed control surfaces.
 
 ---
 
