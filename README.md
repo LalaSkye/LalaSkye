@@ -139,8 +139,6 @@ Every layer is fail-closed: if a gate cannot determine admissibility, execution 
 
 ## Research and Publications
 
-Papers: [Zenodo](https://zenodo.org/search?q=ricky%20dean%20jones)
-
 LinkedIn: [linkedin.com/in/ricky-jones-1b745474](https://linkedin.com/in/ricky-jones-1b745474)
 
 ---
