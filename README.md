@@ -36,7 +36,7 @@ Fixed-price repo triage available:
 - failure points identified
 - clear fix plan before cleanup
 
-[Get in touch →](https://github.com/LalaSkye)
+[Get in touch →](mailto:ricky.mcjones@gmail.com)
 
 ---
 
@@ -170,6 +170,6 @@ All architecture, methods, and system designs across this profile and its reposi
 No rights to use, reproduce, or implement are granted without explicit permission beyond the terms of each repository licence.
 
 **Author:** Ricky Dean Jones
-**GitHub:** [LalaSkye](https://github.com/LalaSkye)
+**GitHub:** [LalaSkye](mailto:ricky.mcjones@gmail.com)
 **Organisation:** Os-Trilogy LMT / AlvianTech
 **Status:** Active research / architecture work
