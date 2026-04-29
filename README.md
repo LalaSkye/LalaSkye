@@ -1,5 +1,47 @@
 # Ricky Jones
 
+**Execution-Boundary Governance · Fail-Closed AI Systems · Runtime Control**
+
+I build small, auditable systems that stop unsafe AI actions
+before they become real.
+
+Most AI governance explains what *should* happen.
+My work asks a harder question:
+
+> Where does the system physically stop?
+
+---
+
+## Start here
+
+- [`commit-gate-core`](https://github.com/LalaSkye/commit-gate-core) — no state mutation without a valid DecisionRecord
+- [`artifact-readiness-engine`](https://github.com/LalaSkye/artifact-readiness-engine) — turns messy repos into runnable, auditable project artefacts
+
+If the gate cannot prove authority, scope, freshness, and replay
+safety, the action does not run.
+
+It holds.
+
+---
+
+## Repo Triage
+
+I help founders and small teams turn messy GitHub repos into clean,
+runnable, auditable projects.
+
+Fixed-price repo triage available:
+
+- install / build check
+- README and setup review
+- failure points identified
+- clear fix plan before cleanup
+
+[Get in touch →](https://github.com/LalaSkye)
+
+---
+
+# Ricky Jones
+
 **Constraint-First Systems Architect** | London, UK
 
 I build open-source tools that enforce governance rules on AI systems before they execute.
