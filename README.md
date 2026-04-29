@@ -40,29 +40,6 @@ Fixed-price repo triage available:
 
 ---
 
-# Ricky Jones
-
-**Constraint-First Systems Architect** | London, UK
-
-I build open-source tools that enforce governance rules on AI systems before they execute.
-
-If your AI pipeline has no checkpoint between "the model decided" and "the action ran", these tools fix that. They are small, deterministic, stdlib-only Python libraries — each under 200 lines, each independently testable, each fail-closed by default.
-
-My work focuses on **pre-execution governance**: explicit authority, halt-first design, and minimising degrees of freedom before optimisation is introduced. The core claim is that governance belongs *upstream* of action — at the interpretation layer — not downstream of execution.
-
-This profile contains small, auditable public primitives.
-Composition and orchestration logic remain private by design.
-
----
-
-## Start here
-
-**[commit-gate-core](https://github.com/LalaSkye/commit-gate-core)** — minimal Python reference implementation of execution-bound governance: no state mutation unless a signed, scoped, unexpired, unreplayed DecisionRecord authorises the exact commit.
-
-Everything else on this profile orbits that primitive.
-
----
-
 ## Core Thesis
 
 **Much of the field focuses on whether an action may execute. My work also examines the earlier boundary where interpretation becomes admissible.**
@@ -83,26 +60,26 @@ Small, auditable Python primitives for AI governance: commit gates, stop machine
 
 ```
 environment
-       |
+  |
 signal
-       |
-interpretation proposal    <-- meaning construction boundary
-       |
+  |
+interpretation proposal   <-- meaning construction boundary
+  |
 interpretation admissibility   <-- 10-rule upstream gate [interpretation-boundary-lab]
-       |
-  pressure monitoring          <-- 5 sources, 3 signal quality axes
-       |
-  C-sector rotation            <-- pressure-activated defensive geometry
-       |
-  state mutation gate          <-- downstream admissibility [dual-boundary-admissibility-lab]
-       |
-authority gate                 <-- commit boundary [constraint-workshop]
-       |
-execution boundary             <-- [execution-boundary-lab]
-       |
+  |
+pressure monitoring   <-- 5 sources, 3 signal quality axes
+  |
+C-sector rotation   <-- pressure-activated defensive geometry
+  |
+state mutation gate   <-- downstream admissibility [dual-boundary-admissibility-lab]
+  |
+authority gate   <-- commit boundary [constraint-workshop]
+  |
+execution boundary   <-- [execution-boundary-lab]
+  |
 action
-       |
-audit / evidence               <-- [csgr-lab]
+  |
+audit / evidence   <-- [csgr-lab]
 ```
 
 Every layer is fail-closed: if a gate cannot determine admissibility, execution does not proceed.
@@ -163,6 +140,7 @@ Every layer is fail-closed: if a gate cannot determine admissibility, execution 
 ## Research and Publications
 
 Papers: [Zenodo](https://zenodo.org/search?q=ricky%20dean%20jones)
+
 LinkedIn: [linkedin.com/in/ricky-jones-1b745474](https://linkedin.com/in/ricky-jones-1b745474)
 
 ---
@@ -181,16 +159,14 @@ If your team is building AI systems that need deterministic governance, auditabl
 
 ## Contribution Pattern
 
-Small, auditable tools.
-Clear failure modes.
-Minimal claims.
-Running code over commentary.
+Small, auditable tools. Clear failure modes. Minimal claims. Running code over commentary.
 
 ---
 
 ## Authorship & Rights
 
 All architecture, methods, and system designs across this profile and its repositories are the original work of **Ricky Dean Jones** unless otherwise stated.
+
 No rights to use, reproduce, or implement are granted without explicit permission beyond the terms of each repository licence.
 
 **Author:** Ricky Dean Jones
