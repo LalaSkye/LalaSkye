@@ -1,173 +1,160 @@
 # Ricky Jones
 
-**Execution-Boundary Governance · Fail-Closed AI Systems · Runtime Control**
+**AI Governance Systems Engineer**  
+Runtime Governance · Execution-Boundary Control · Fail-Closed Architecture
 
-I build small, auditable systems that stop unsafe AI actions
-before they become real.
+I build small, auditable systems that stop unsafe AI actions before they become real.
 
-Most AI governance explains what *should* happen.
-My work asks a harder question:
+Most AI governance explains what *should* happen.  
+My work asks the harder engineering question:
 
-> Where does the system physically stop?
+> **Where does the system physically stop?**
 
 ---
 
 ## Start here
 
-- [`commit-gate-core`](https://github.com/LalaSkye/commit-gate-core) — no state mutation without a valid DecisionRecord
-- [`artifact-readiness-engine`](https://github.com/LalaSkye/artifact-readiness-engine) — turns messy repos into runnable, auditable project artefacts
+### [`commit-gate-core`](https://github.com/LalaSkye/commit-gate-core)
 
-If the gate cannot prove authority, scope, freshness, and replay
-safety, the action does not run.
+Reference kernel for execution-boundary governance.
+
+**Invariant:**
+
+> No state mutation is allowed unless a signed, scoped, unexpired, unreplayed `DecisionRecord` authorises the exact commit.
+
+If authority, scope, expiry, replay, or receipt checks fail, the action does not run.
 
 It holds.
 
----
-
-## Repo Triage
-
-I help founders and small teams turn messy GitHub repos into clean,
-runnable, auditable projects.
-
-Fixed-price repo triage available:
-
-- install / build check
-- README and setup review
-- failure points identified
-- clear fix plan before cleanup
-
-[Get in touch →](mailto:ricky.mcjones@gmail.com)
-
----
-
-## Core Thesis
-
-**Much of the field focuses on whether an action may execute. My work also examines the earlier boundary where interpretation becomes admissible.**
-
-Between a raw signal and an executed action, there is an interpretation step. That step introduces assumptions, collapses ambiguity, expands scope, and attributes intent. None of these operations are neutral. All of them can be tested against formal rules — *before any execution-layer question is even asked*.
-
-Current field (Faramesh, Thinking OS, POLARIS) gates at the execution boundary. This work gates one full layer upstream: at meaning construction itself.
-
----
-
-## Why follow
-
-Small, auditable Python primitives for AI governance: commit gates, stop machines, invariant locks, policy linting, replay resistance, and fail-closed control surfaces.
-
----
-
-## Architecture
-
-```
-environment
-  |
-signal
-  |
-interpretation proposal   <-- meaning construction boundary
-  |
-interpretation admissibility   <-- 10-rule upstream gate [interpretation-boundary-lab]
-  |
-pressure monitoring   <-- 5 sources, 3 signal quality axes
-  |
-C-sector rotation   <-- pressure-activated defensive geometry
-  |
-state mutation gate   <-- downstream admissibility [dual-boundary-admissibility-lab]
-  |
-authority gate   <-- commit boundary [constraint-workshop]
-  |
-execution boundary   <-- [execution-boundary-lab]
-  |
-action
-  |
-audit / evidence   <-- [csgr-lab]
+```text
+Attempt:        send external email
+DecisionRecord: missing authority
+Result:         HOLD
+Email sent:     false
+Receipt written: true
 ```
 
-Every layer is fail-closed: if a gate cannot determine admissibility, execution does not proceed.
+That is the shape of the work: unsafe consequence refused before execution, with a receipt proving why.
 
 ---
 
-## Repository Architecture
+## What this profile is about
 
-### The Corridor
+This GitHub profile collects small governance primitives for AI systems:
 
-| Repo | Layer | Tests | What It Does |
-|---|---|---|---|
-| [interpretation-boundary-lab](https://github.com/LalaSkye/interpretation-boundary-lab) | Upstream boundary | 81 | 10-rule admissibility gate for interpretation proposals |
-| [dual-boundary-admissibility-lab](https://github.com/LalaSkye/dual-boundary-admissibility-lab) | Full corridor | 261 | Dual-boundary model with pressure monitoring and C-sector rotation |
-| [execution-boundary-lab](https://github.com/LalaSkye/execution-boundary-lab) | Execution boundary | - | Demonstrates cascading failures without upstream governance |
+- commit gates
+- stop machines
+- invariant locks
+- policy linting
+- admissibility gates
+- replay resistance
+- auditable failure receipts
+- fail-closed control surfaces
 
-### Control Primitives
-
-| Repo | Layer | What It Does |
-|---|---|---|
-| [stop-machine](https://github.com/LalaSkye/stop-machine) | Halt primitive | Deterministic three-state stop controller. Once RED, nothing runs. |
-| [constraint-workshop](https://github.com/LalaSkye/constraint-workshop) | Primitive composition | Authority gate, invariant litmus, stop machine — composable bricks |
-| [invariant-lock](https://github.com/LalaSkye/invariant-lock) | Drift prevention | Refuse execution unless invariant version increments |
-| [deterministic-lexicon](https://github.com/LalaSkye/deterministic-lexicon) | Vocabulary | Fixed terms, exact matches, no inference |
-| [policy-lint](https://github.com/LalaSkye/policy-lint) | Policy validation | Deterministic linter for governance statements |
-
-### Measurement
-
-| Repo | Layer | What It Does |
-|---|---|---|
-| [csgr-lab](https://github.com/LalaSkye/csgr-lab) | Audit / evidence | Contracted stability and drift measurement for LLMs |
+The point is not to describe governance.  
+The point is to make invalid transitions structurally unable to execute.
 
 ---
 
-## Canonical Vocabulary
+## Repository map
 
-| Term | Meaning |
+### Flagship
+
+| Repo | Purpose |
 |---|---|
-| **interpretation admissibility** | Gating whether meaning construction is structurally sound before it reaches verdict |
-| **commit boundary** | The point at which a decision becomes irreversible |
-| **authority gate** | A check that execution has explicit, evidence-backed permission |
-| **fail-closed control** | If a gate cannot decide, execution does not proceed |
-| **C-sector rotation** | Pressure-activated defensive geometry — interrupt vector rotates into control path |
+| [`commit-gate-core`](https://github.com/LalaSkye/commit-gate-core) | Reference kernel: no mutation without a valid `DecisionRecord` |
+
+### Execution-boundary demos
+
+| Repo | Purpose |
+|---|---|
+| [`runtime-commit-gate-demo`](https://github.com/LalaSkye/runtime-commit-gate-demo) | Demonstrates a runtime commit gate refusing unsafe consequence |
+| [`execution-boundary-lab`](https://github.com/LalaSkye/execution-boundary-lab) | Shows where governance must physically stop execution |
+| [`execution-gate-litmus`](https://github.com/LalaSkye/execution-gate-litmus) | Minimal litmus surface for testing whether a gate actually binds |
+
+### Admissibility and interpretation
+
+| Repo | Purpose |
+|---|---|
+| [`interpretation-boundary-lab`](https://github.com/LalaSkye/interpretation-boundary-lab) | Tests meaning construction before execution is even considered |
+| [`dual-boundary-admissibility-lab`](https://github.com/LalaSkye/dual-boundary-admissibility-lab) | Models upstream interpretation plus downstream execution control |
+| [`admissible-transition-lab`](https://github.com/LalaSkye/admissible-transition-lab) | Explores what makes a transition admissible rather than merely possible |
+| [`transition-admissibility-gate`](https://github.com/LalaSkye/transition-admissibility-gate) | Small gate surface for transition-level admissibility |
+
+### Control primitives
+
+| Repo | Purpose |
+|---|---|
+| [`stop-machine`](https://github.com/LalaSkye/stop-machine) | Deterministic stop primitive: once RED, nothing runs |
+| [`constraint-workshop`](https://github.com/LalaSkye/constraint-workshop) | Composable authority, invariant, and stop-control primitives |
+| [`invariant-lock`](https://github.com/LalaSkye/invariant-lock) | Refuses execution unless invariant discipline is preserved |
+| [`deterministic-lexicon`](https://github.com/LalaSkye/deterministic-lexicon) | Fixed vocabulary surface: exact terms, no inference drift |
+| [`policy-lint`](https://github.com/LalaSkye/policy-lint) | Deterministic checks for governance language and policy claims |
+
+### Readiness and evidence
+
+| Repo | Purpose |
+|---|---|
+| [`artifact-readiness-engine`](https://github.com/LalaSkye/artifact-readiness-engine) | Checks whether a repo is ready to be inspected, run, and trusted |
+| [`inspection-surface`](https://github.com/LalaSkye/inspection-surface) | Minimal surface for showing what can be inspected and verified |
+| [`csgr-lab`](https://github.com/LalaSkye/csgr-lab) | Measurement surface for stability, drift, and audit evidence |
 
 ---
 
-## Design Principles
+## Core thesis
 
-- Determinism over optimisation
-- Explicit authority required for execution
-- Stop is a first-class primitive
-- Shrink degrees of freedom before adding complexity
-- Tests are mandatory
-- Public artefacts do not expose private orchestration
+Governance is not real because a policy says an action is forbidden.
 
----
+Governance becomes real when the forbidden action cannot cross the execution boundary.
 
-## Research and Publications
+A governed AI system must be able to show:
 
-LinkedIn: [linkedin.com/in/ricky-jones-1b745474](https://linkedin.com/in/ricky-jones-1b745474)
+1. what action was attempted
+2. what authority was required
+3. which proof was missing or invalid
+4. where execution stopped
+5. what receipt proves the non-execution
 
----
+Without that, the system may have commentary, review, or theatre.
 
-## Work With Me
-
-I consult on AI governance architecture, runtime constraint design, and EU AI Act compliance tooling.
-
-If your team is building AI systems that need deterministic governance, auditable policy enforcement, or compliant stop mechanisms — I can help.
-
-→ **ricky.mcjones@gmail.com**
-→ [LinkedIn](https://linkedin.com/in/ricky-jones-1b745474)
-→ [GitHub Sponsors](https://github.com/sponsors/LalaSkye)
+It does not yet have control.
 
 ---
 
-## Contribution Pattern
+## Design principles
 
-Small, auditable tools. Clear failure modes. Minimal claims. Running code over commentary.
+- Stop is a first-class primitive.
+- Authority is checked before mutation.
+- Ambiguity fails closed.
+- Receipts are written for refusal, not just success.
+- Tests must prove bypass failure, not only happy paths.
+- Public artefacts should be small enough to inspect.
+- Claims should be no larger than the evidence can carry.
 
 ---
 
-## Authorship & Rights
+## Work with me
+
+I help teams turn AI governance from policy language into auditable runtime control.
+
+Useful problems include:
+
+- AI systems that need deterministic stop mechanisms
+- approval flows that must bind before action
+- high-risk automation with audit requirements
+- governance claims that need executable proof
+- messy repositories that need to become inspectable artefacts
+
+Email: **ricky.mcjones@gmail.com**  
+LinkedIn: [linkedin.com/in/ricky-jones-1b745474](https://linkedin.com/in/ricky-jones-1b745474)  
+GitHub Sponsors: [github.com/sponsors/LalaSkye](https://github.com/sponsors/LalaSkye)
+
+---
+
+## Authorship
 
 All architecture, methods, and system designs across this profile and its repositories are the original work of **Ricky Dean Jones** unless otherwise stated.
 
-No rights to use, reproduce, or implement are granted without explicit permission beyond the terms of each repository licence.
+Repository licences govern code use. Broader architecture, method, and authorship claims require explicit permission where not otherwise licensed.
 
-**Author:** Ricky Dean Jones
-**GitHub:** [LalaSkye](mailto:ricky.mcjones@gmail.com)
-**Organisation:** Os-Trilogy LMT / AlvianTech
-**Status:** Active research / architecture work
+**Status:** active research and engineering work.
