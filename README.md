@@ -1,14 +1,12 @@
-# Ricky Jones
+# Ricky Jones / LalaSkye
 
-**AI Governance Systems Engineer**  
-Runtime Governance · Execution-Boundary Control · Fail-Closed Architecture
+AI Governance Systems Engineer working on execution-boundary control, admissibility, runtime authority, and fail-closed AI systems.
 
-I build small, auditable systems that stop unsafe AI actions before they become real.
+This GitHub contains public artefacts for a single governance question:
 
-Most AI governance explains what *should* happen.  
-My work asks the harder engineering question:
+> **When is a system allowed to act at all?**
 
-> **Where does the system physically stop?**
+The work focuses on systems where AI moves beyond advice and begins participating in actions that affect money, access, legal state, infrastructure, records, workflows, or downstream commitments.
 
 ---
 
@@ -24,8 +22,6 @@ Reference kernel for execution-boundary governance.
 
 If authority, scope, expiry, replay, or receipt checks fail, the action does not run.
 
-It holds.
-
 ```text
 Attempt:        send external email
 DecisionRecord: missing authority
@@ -38,21 +34,16 @@ That is the shape of the work: unsafe consequence refused before execution, with
 
 ---
 
-## What this profile is about
+## Core themes
 
-This GitHub profile collects small governance primitives for AI systems:
-
-- commit gates
-- stop machines
-- invariant locks
-- policy linting
-- admissibility gates
-- replay resistance
-- auditable failure receipts
-- fail-closed control surfaces
-
-The point is not to describe governance.  
-The point is to make invalid transitions structurally unable to execute.
+- Execution-boundary control
+- Runtime admissibility
+- Authority-before-action
+- Fail-closed architecture
+- Refusal and non-execution
+- Commit gates
+- Audit and replay evidence
+- Governed human-AI workflows
 
 ---
 
@@ -98,6 +89,16 @@ The point is to make invalid transitions structurally unable to execute.
 | [`artifact-readiness-engine`](https://github.com/LalaSkye/artifact-readiness-engine) | Checks whether a repo is ready to be inspected, run, and trusted |
 | [`inspection-surface`](https://github.com/LalaSkye/inspection-surface) | Minimal surface for showing what can be inspected and verified |
 | [`csgr-lab`](https://github.com/LalaSkye/csgr-lab) | Measurement surface for stability, drift, and audit evidence |
+
+---
+
+## Research surface
+
+These repositories sit alongside published papers on admissibility, runtime governance, refusal, constraint, authority allocation, and fail-closed AI architecture.
+
+The shared question is simple:
+
+> **Where does the system physically stop?**
 
 ---
 
