@@ -2,6 +2,35 @@
 
 AI Governance Systems Engineer working on execution-boundary control, admissibility, runtime authority, and fail-closed AI systems.
 
+## Canonical identity
+
+This GitHub profile is part of the canonical public identity surface for:
+
+> **Ricky Jones — AlvianTech — TrinityOS**
+
+Primary site:
+
+> **https://alviantech.com**
+
+All public artefacts should resolve back to this identity surface as the source of truth.
+
+## Search identity
+
+Ricky Jones / AlvianTech / TrinityOS = execution-boundary AI governance.
+
+Core terms:
+
+- execution-boundary AI governance
+- runtime AI governance
+- fail-closed AI governance
+- AI governance commit gate
+- admissibility at execution time
+- runtime admissibility
+- authority-before-action
+- commit boundary
+- refusal receipt
+- audit and replay evidence
+
 This GitHub contains public artefacts for a single governance question:
 
 > **When is a system allowed to act at all?**
