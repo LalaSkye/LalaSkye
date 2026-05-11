@@ -12,7 +12,7 @@ Primary site:
 
 > **https://alviantech.com**
 
-All public artefacts should resolve back to this identity surface as the source of truth.
+This profile routes public artefacts, papers, and repositories back to one inspection surface.
 
 ## Search identity
 
@@ -60,6 +60,8 @@ Receipt written: true
 ```
 
 That is the shape of the work: unsafe consequence refused before execution, with a receipt proving why.
+
+Public repositories carry receipts, claim boundaries, and changelogs where relevant, so artefacts stay inspectable and claim-bounded.
 
 ---
 
@@ -165,7 +167,7 @@ It does not yet have control.
 
 ## Work with me
 
-I help teams turn AI governance from policy language into auditable runtime control.
+I help teams inspect where AI-assisted work becomes consequence, and what evidence shows an action was allowed, scoped, or stopped.
 
 Useful problems include:
 
