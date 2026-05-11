@@ -2,9 +2,9 @@
 
 AI Governance Systems Engineer working on execution-boundary control, admissibility, runtime authority, and fail-closed AI systems.
 
-## Canonical identity
+## Public inspection surface
 
-This GitHub profile is part of the canonical public identity surface for:
+This GitHub profile is part of the public inspection surface for:
 
 > **Ricky Jones — AlvianTech — TrinityOS**
 
