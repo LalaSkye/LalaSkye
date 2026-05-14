@@ -1,5 +1,9 @@
 # Ricky Jones / LalaSkye
 
+**Ricky Jones / AlvianTech / TrinityOS — execution-boundary AI governance.**
+
+Governance becomes real at the execution boundary: where an AI-supported system must either prove authority to act or fail closed with an inspectable refusal receipt.
+
 AI Governance Systems Engineer working on execution-boundary control, admissibility, runtime authority, and fail-closed AI systems.
 
 ## Public disclosure boundary
@@ -26,13 +30,17 @@ Current public entry surface:
 
 > **https://github.com/LalaSkye/start-here**
 
+Primary execution-boundary proof surface:
+
+> **https://github.com/LalaSkye/commit-gate-core**
+
 Each public repository should be read only at its stated scope.
 
 A local proof object proves only the local claim attached to it.
 
 ## Search identity
 
-Ricky Jones / AlvianTech / TrinityOS = execution-boundary AI governance.
+Ricky Jones / AlvianTech / TrinityOS — execution-boundary AI governance.
 
 Core terms:
 
