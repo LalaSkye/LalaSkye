@@ -34,6 +34,8 @@ Primary execution-boundary proof surface:
 
 > **https://github.com/LalaSkye/commit-gate-core**
 
+Custodianship receipt: timestamped note on “custodianship” as responsibility for what AI systems are allowed to influence once confidence, authority, or admissibility changes.
+
 Each public repository should be read only at its stated scope.
 
 A local proof object proves only the local claim attached to it.
