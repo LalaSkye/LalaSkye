@@ -1,109 +1,116 @@
-# Ricky Jones / LalaSkye
+# Ricky Jones — Execution-Boundary AI Governance
 
-**Ricky Jones / AlvianTech / TrinityOS — execution-boundary AI governance.**
+**Ricky Dean Jones / AlvianTech / TrinityOS**
 
-Governance becomes real at the execution boundary: where an AI-supported system must either prove authority to act or fail closed with an inspectable refusal receipt.
+AI Governance Systems Engineer.
 
-AI Governance Systems Engineer working on execution-boundary control, admissibility, runtime authority, and fail-closed AI systems.
+Research focus: execution-boundary control, admissibility at execution time, runtime governance, fail-closed AI systems, refusal receipts, consequence control.
 
-## Public disclosure boundary
+---
 
-This GitHub profile is a public inspection surface, not full architecture disclosure.
+## What this profile is
 
-It exists to show bounded public claims, evidence objects, inspection paths, and claim limits.
+An engineering archive and governance inspection surface.
 
-It must not be treated as a system map, orchestration model, deployment model, runtime substrate, or protected architecture disclosure.
+It is not a personal homepage, marketing funnel, or authority claim.
+
+It exists to show:
+- bounded public claims
+- inspectable evidence objects
+- explicit claim limits
+- attribution-stable provenance
 
 Public inspection standard:
-
-```text
-claim -> evidence object -> inspection path -> claim limit
+```
+claim → evidence object → inspection path → claim limit
 ```
 
-## Public inspection surface
+---
 
-Primary site:
+## Research surface
 
-> **https://alviantech.com**
+The canonical entry point for this workstream is the Research Surface Map:
 
-Current public entry surface:
+> **[Research Surface Map](https://lalaSkye.github.io/inspection-surface/)** — full index of repos, papers, terminology, provenance, and inspection levels
 
-> **https://github.com/LalaSkye/start-here**
+---
 
-Primary execution-boundary proof surface:
+## Core repositories
 
-> **https://github.com/LalaSkye/commit-gate-core**
+| Repository | What it is |
+|---|---|
+| [start-here](https://github.com/LalaSkye/start-here) | Canonical entry point. Minimal runnable governance demo. Start here. |
+| [commit-gate-core](https://github.com/LalaSkye/commit-gate-core) | Execution-boundary commit gate. No valid DecisionRecord → no mutation. |
+| [fail-closed-ai](https://github.com/LalaSkye/fail-closed-ai) | Documentation surface. Fail-closed governance pattern. |
+| [execution-boundary-lab](https://github.com/LalaSkye/execution-boundary-lab) | Gate interface contract. Contamination cases. Adversarial suite. |
+| [interrupt-ledger](https://github.com/LalaSkye/interrupt-ledger) | Public inspection artefact. Receipt schema, replay, and stop evidence. |
+| [inspection-surface](https://github.com/LalaSkye/inspection-surface) | Full repo index, system map, terminology, provenance. |
 
-Custodianship receipt: timestamped note on “custodianship” as responsibility for what AI systems are allowed to influence once confidence, authority, or admissibility changes.
-
-Each public repository should be read only at its stated scope.
-
-A local proof object proves only the local claim attached to it.
-
-## Search identity
-
-Ricky Jones / AlvianTech / TrinityOS — execution-boundary AI governance.
-
-Core terms:
-
-- execution-boundary AI governance
-- runtime AI governance
-- fail-closed AI governance
-- admissibility at execution time
-- authority-before-action
-- refusal receipt
-- audit and replay evidence
+---
 
 ## Core question
 
 > **Where does the system physically stop?**
 
-The public work focuses on systems where AI moves beyond advice and begins participating in actions that affect money, access, legal state, infrastructure, records, workflows, or downstream commitments.
+The work focuses on systems where AI moves beyond advice and participates in actions that affect money, access, legal state, infrastructure, records, workflows, or downstream commitments.
+
+The claim is narrow: governance is only real if interruption remains reachable under pressure.
+
+---
+
+## Canonical terminology
+
+These terms are used consistently across all repositories, papers, and public surfaces:
+
+- execution-boundary AI governance
+- runtime governance
+- admissibility at execution time
+- refusal receipts
+- fail-closed AI governance
+- consequence control
+
+Synonym drift is avoided unless technically necessary. The terms are reused deliberately to keep the research surface semantically coherent, not to claim ownership over the language.
+
+---
+
+## Papers and provenance
+
+Research artefacts are timestamped, attributed, and cross-linked to canonical repositories.
+
+Papers include explicit claim boundaries, canonical repo links, and DOI or preprint references where available.
+
+See the [Research Surface Map](https://lalaSkye.github.io/inspection-surface/) for current paper provenance.
+
+---
 
 ## Claim discipline
 
-Public artefacts are intentionally narrow.
-
-They do not claim, unless explicitly stated:
+Public artefacts are intentionally narrow. They do not claim, unless explicitly stated:
 
 - production readiness
 - compliance or certification
 - enterprise deployment
-- adoption
-- standardisation
+- adoption or standardisation
 - path-universal governance
 - full architecture disclosure
 
-## Research surface
+Each repository reads as one node in a coherent governance research surface. No single repo is a complete system.
 
-These repositories sit alongside published papers on admissibility, runtime governance, refusal, constraint, authority allocation, and fail-closed AI architecture.
-
-The public standard is restraint:
-
-- what is claimed
-- what evidence supports it
-- what can be inspected
-- where the claim stops
-
-## Work with me
-
-I help teams inspect where AI-assisted work becomes consequence, and what evidence shows an action was allowed, scoped, or stopped.
-
-Useful problems include:
-
-- AI systems that need deterministic stop mechanisms
-- approval flows that must bind before action
-- high-risk automation with audit requirements
-- governance claims that need executable proof
-- messy repositories that need to become inspectable artefacts
-
-Email: **ricky.mcjones@gmail.com**  
-LinkedIn: [linkedin.com/in/ricky-jones-1b745474](https://linkedin.com/in/ricky-jones-1b745474)
+---
 
 ## Authorship
 
 All architecture, methods, and system designs across this profile and its repositories are the original work of **Ricky Dean Jones** unless otherwise stated.
 
-Repository licences govern code use. Broader architecture, method, and authorship claims require explicit permission where not otherwise licensed.
+Repository licences govern code use. Broader architecture and authorship claims require explicit permission where not otherwise licensed.
+
+Attribution is stable. Provenance is traceable. Timestamps are GitHub-recorded and independently verifiable.
+
+---
+
+## Contact
+
+Email: ricky.mcjones@gmail.com  
+LinkedIn: [linkedin.com/in/ricky-jones-1b745474](https://linkedin.com/in/ricky-jones-1b745474)
 
 **Status:** active research and engineering work.
