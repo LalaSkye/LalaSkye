@@ -4,7 +4,7 @@
 
 AI Governance Systems Engineer.
 
-Research focus: execution-boundary control, admissibility at execution time, runtime governance, fail-closed AI systems, refusal receipts, consequence control.
+**Research Surface Map (canonical):** [lalaskye.github.io/inspection-surface](https://lalaskye.github.io/inspection-surface/) — full index of repos, papers, terminology, provenance, and inspection levels.
 
 ---
 
@@ -27,14 +27,6 @@ claim → evidence object → inspection path → claim limit
 
 ---
 
-## Research surface
-
-The canonical entry point for this workstream is the Research Surface Map:
-
-> **[Research Surface Map](https://lalaSkye.github.io/inspection-surface/)** — full index of repos, papers, terminology, provenance, and inspection levels
-
----
-
 ## Core repositories
 
 | Repository | What it is |
@@ -44,7 +36,7 @@ The canonical entry point for this workstream is the Research Surface Map:
 | [fail-closed-ai](https://github.com/LalaSkye/fail-closed-ai) | Documentation surface. Fail-closed governance pattern. |
 | [execution-boundary-lab](https://github.com/LalaSkye/execution-boundary-lab) | Gate interface contract. Contamination cases. Adversarial suite. |
 | [interrupt-ledger](https://github.com/LalaSkye/interrupt-ledger) | Public inspection artefact. Receipt schema, replay, and stop evidence. |
-| [inspection-surface](https://github.com/LalaSkye/inspection-surface) | Full repo index, system map, terminology, provenance. |
+| [inspection-surface](https://github.com/LalaSkye/inspection-surface) | Research Surface Map. Full repo index, system map, terminology, provenance. |
 
 ---
 
@@ -79,7 +71,7 @@ Research artefacts are timestamped, attributed, and cross-linked to canonical re
 
 Papers include explicit claim boundaries, canonical repo links, and DOI or preprint references where available.
 
-See the [Research Surface Map](https://lalaSkye.github.io/inspection-surface/) for current paper provenance.
+See the [Research Surface Map](https://lalaskye.github.io/inspection-surface/) for current paper provenance.
 
 ---
 
