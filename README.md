@@ -18,9 +18,12 @@ Public GitHub is an inspection surface, not full architecture disclosure.
 
 ## Start here
 
-- [start-here](https://github.com/LalaSkye/start-here) — canonical entry point
-- [commit-gate-core](https://github.com/LalaSkye/commit-gate-core) — bounded proof that mutation requires a valid DecisionRecord
+- [start-here](https://github.com/LalaSkye/start-here) — entry demo: on its demonstrated path, no state mutation without a valid decision record
+- [commit-gate-core](https://github.com/LalaSkye/commit-gate-core) — authorize-only kernel: binds exact payload bytes to a DecisionRecord and returns authorisation or refusal; it does not apply the payload
+- [obligation-bound-policy-admission-lab](https://github.com/LalaSkye/obligation-bound-policy-admission-lab) — historical admission ≠ current standing ≠ observed active state
 - [inspection-surface](https://github.com/LalaSkye/inspection-surface) — public research and provenance surface
+
+These are separate objects. Do not inherit proofs across them.
 
 ## What this work proves
 
