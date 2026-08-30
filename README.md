@@ -1,6 +1,8 @@
-# Ricky Jones | AlvianTech | AI Governance Systems Engineer | TrinityOS
+# Ricky Jones — execution-boundary engineer
 
-I build bounded proof surfaces for AI governance at the point where system action becomes consequence.
+I build bounded, inspectable controls at the point of authorisation for
+AI-supported systems. The public objects below are reference demonstrations,
+not production enforcement.
 
 ## Core question
 
@@ -16,12 +18,11 @@ claim → evidence object → inspection path → claim limit
 
 Public GitHub is an inspection surface, not full architecture disclosure.
 
-## Start here
+## Three public inspection objects
 
 - [start-here](https://github.com/LalaSkye/start-here) — entry demo: on its demonstrated path, no state mutation without a valid decision record
 - [commit-gate-core](https://github.com/LalaSkye/commit-gate-core) — authorize-only kernel: binds exact payload bytes to a DecisionRecord and returns authorisation or refusal; it does not apply the payload
-- [obligation-bound-policy-admission-lab](https://github.com/LalaSkye/obligation-bound-policy-admission-lab) — historical admission ≠ current standing ≠ observed active state
-- [inspection-surface](https://github.com/LalaSkye/inspection-surface) — public research and provenance surface
+- [obligation-bound-policy-admission-lab](https://github.com/LalaSkye/obligation-bound-policy-admission-lab) — single-engine reference harness: historical admission ≠ current standing ≠ observed active state; not a gate
 
 These are separate objects. Do not inherit proofs across them.
 
@@ -40,9 +41,11 @@ Unless explicitly stated, these artefacts do not prove:
 - path-universal governance
 - full architecture disclosure
 
-## Authorship
+## Evidence and authorship boundary
 
-Architecture, methods, and system designs across this profile are the original work of **Ricky Dean Jones**, unless otherwise stated.
+Repository-level authorship and contribution statements are recorded in each
+object. GitHub timestamps establish public possession at the recorded dates;
+they do not by themselves establish novelty, category priority or copying.
 
 ## Contact
 
