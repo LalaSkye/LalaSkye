@@ -23,11 +23,13 @@ Public GitHub is an inspection surface, not full architecture disclosure.
 These three names are the admitted public inspection class. They are the
 objects this profile asks a reader to inspect.
 
-- [start-here](https://github.com/LalaSkye/start-here) — entry demo: on its demonstrated path, no state mutation without a valid decision record
+- [stop-machine](https://github.com/LalaSkye/stop-machine) — current public halt primitive and canonical starting link
 - [commit-gate-core](https://github.com/LalaSkye/commit-gate-core) — authorize-only kernel: binds exact payload bytes to a DecisionRecord and returns authorisation or refusal; it does not apply the payload
 - [obligation-bound-policy-admission-lab](https://github.com/LalaSkye/obligation-bound-policy-admission-lab) — single-engine reference harness: historical admission ≠ current standing ≠ observed active state; not a gate
 
 These are separate objects. Do not inherit proofs across them.
+
+Historical, superseded inspection artefact: [start-here](https://github.com/LalaSkye/start-here) — earlier entry demo retained for inspection only; superseded as the public halt primitive by stop-machine. Its demonstrated path claim stays bounded to start-here and does not transfer to stop-machine.
 
 Routing index (not a fourth object): [inspection-surface](https://lalaskye.github.io/inspection-surface/)
 
