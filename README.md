@@ -4,6 +4,10 @@ I build bounded, inspectable controls at the point of authorisation for
 AI-supported systems. The objects named below are reference demonstrations,
 not production enforcement.
 
+**Current public starting point:** [stop-machine](https://github.com/LalaSkye/stop-machine)
+
+The inspection objects below remain separate evidence objects; this pointer does not transfer their proofs to `stop-machine`.
+
 ## Core question
 
 > **Where does the system physically stop?**
