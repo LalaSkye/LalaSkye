@@ -4,9 +4,7 @@ I build bounded, inspectable controls at the point of authorisation for
 AI-supported systems. The objects named below are reference demonstrations,
 not production enforcement.
 
-**Current public starting point:** [stop-machine](https://github.com/LalaSkye/stop-machine)
-
-The inspection objects below remain separate evidence objects; this pointer does not transfer their proofs to `stop-machine`.
+**Public routing status:** Under revalidation. No repository is currently designated as the public starting point.
 
 ## Core question
 
