@@ -4,7 +4,7 @@ I build bounded, inspectable controls at the point of authorisation for
 AI-supported systems. The objects named below are reference demonstrations,
 not production enforcement.
 
-**Public routing status:** START HERE → [start-here](https://github.com/LalaSkye/start-here). The admitted default is a routing surface containing two separate local proof objects; evidence does not transfer between them.
+**Public routing status:** Under revalidation. No repository is currently designated as the public starting point. The three public inspection objects below remain separately inspectable; evidence does not transfer between them.
 
 ## Core question
 
@@ -25,7 +25,7 @@ Public GitHub is an inspection surface, not full architecture disclosure.
 These three names are the admitted public inspection class. They are the
 objects this profile asks a reader to inspect.
 
-- [start-here](https://github.com/LalaSkye/start-here) — public routing surface. It contains two separate local proof objects: the original decision/commit demo and a measured in-memory mutation fixture. Evidence does not transfer between them. Current admitted default: `2b1723b96ac2d73c28d112e17b1c07ed9caa6b91`.
+- [start-here](https://github.com/LalaSkye/start-here) — a bounded inspection object containing two separate local proof objects. It is not currently designated as the public starting point.
 - [commit-gate-core](https://github.com/LalaSkye/commit-gate-core) — authorize-only kernel: binds exact payload bytes to a DecisionRecord and returns authorisation or refusal; it does not apply the payload
 - [obligation-bound-policy-admission-lab](https://github.com/LalaSkye/obligation-bound-policy-admission-lab) — single-engine reference harness: historical admission ≠ current standing ≠ observed active state; not a gate
 
