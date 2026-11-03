@@ -1,71 +1,39 @@
 # Ricky Jones — execution-boundary engineer
+AlvianTech
 
-I build bounded, inspectable controls at the point of authorisation for
-AI-supported systems. The objects named below are reference demonstrations,
-not production enforcement.
+I build bounded, inspectable controls at the point of authorisation for AI-supported systems.
+The objects named below are reference demonstrations, not production enforcement.
 
-**Public routing status:** Under revalidation. No repository is currently designated as the public starting point. The three public inspection objects below remain separately inspectable; evidence does not transfer between them.
-
-## Core question
+**Public routing status:** Under revalidation. No repository is currently designated as the public starting point.
 
 > **Where does the system physically stop?**
 
-The work focuses on execution-boundary control, admissibility, refusal, authority, receipts, and replay.
-
-## Public inspection standard
-
-```text
-claim → evidence object → inspection path → claim limit
-```
-
-Public GitHub is an inspection surface, not full architecture disclosure.
+Public GitHub is an inspection surface. Evidence does not transfer between objects.
 
 ## Three public inspection objects
 
-These three names are the admitted public inspection class. They are the
-objects this profile asks a reader to inspect.
+These are the admitted public inspection class. They remain separately inspectable.
 
-- [start-here](https://github.com/LalaSkye/start-here) — a bounded inspection object containing two separate local proof objects. It is not currently designated as the public starting point.
-- [commit-gate-core](https://github.com/LalaSkye/commit-gate-core) — authorize-only kernel: binds exact payload bytes to a DecisionRecord and returns authorisation or refusal; it does not apply the payload
-- [obligation-bound-policy-admission-lab](https://github.com/LalaSkye/obligation-bound-policy-admission-lab) — single-engine reference harness: historical admission ≠ current standing ≠ observed active state; not a gate
+- [start-here](https://github.com/LalaSkye/start-here) — bounded inspection object containing two separate local proof objects.
+  *Limit:* It is not currently designated as the public starting point. On the demonstrated path, no state mutation without a valid decision record.
 
-These are separate objects. Do not inherit proofs across them.
+- [commit-gate-core](https://github.com/LalaSkye/commit-gate-core) — authorize-only kernel. Binds exact payload bytes to a scoped, fresh, one-use DecisionRecord and returns authorisation or refusal.
+  *Limit:* It does not apply the payload. An authorisation return is not an observed resource mutation.
 
-Routing index (not a fourth object): [inspection-surface](https://lalaskye.github.io/inspection-surface/)
+- [obligation-bound-policy-admission-lab](https://github.com/LalaSkye/obligation-bound-policy-admission-lab) — single-engine reference harness. Historical policy admission ≠ current standing ≠ observed active state.
+  *Limit:* Not a gate. A receipt is not automatically evidence of observed active engine state.
 
-## Other public repositories
+Do not inherit proofs across them.
 
-The account also contains other public repositories — labs, scaffolds, indexes,
-and earlier experiments. A public name is not admission to the inspection class
-above. Those repositories do not inherit proofs from the three objects, and the
-three objects do not inherit proofs from them.
+## Secondary index
 
-The Repositories tab is GitHub's inventory. It is not the inspection class.
+[inspection-surface](https://lalaskye.github.io/inspection-surface/) — routing index only. Not a fourth inspection object. PATHS_RESOLVE is not a successful test replay.
 
-## What this work proves
+## Limits
 
-Each of the three inspection objects supports one local claim with an inspectable
-evidence object and an explicit stopping point.
+Unless explicitly stated in the named object, these artefacts do not prove production readiness, compliance, enterprise deployment, adoption, path-universal governance, or full architecture disclosure.
 
-## What this work does not prove
+Repository-level authorship and contribution statements are recorded in each object. GitHub timestamps establish public possession; they do not establish novelty or priority.
 
-Unless explicitly stated, these artefacts do not prove:
-
-- production readiness
-- compliance or certification
-- enterprise deployment
-- adoption or standardisation
-- path-universal governance
-- full architecture disclosure
-
-## Evidence and authorship boundary
-
-Repository-level authorship and contribution statements are recorded in each
-object. GitHub timestamps establish public possession at the recorded dates;
-they do not by themselves establish novelty, category priority or copying.
-
-## Contact
-
-LinkedIn: [linkedin.com/in/ricky-jones-trinityos](https://www.linkedin.com/in/ricky-jones-trinityos)
-
+**Contact:** [linkedin.com/in/ricky-jones-trinityos](https://www.linkedin.com/in/ricky-jones-trinityos)
 **Status:** active research and engineering work.
