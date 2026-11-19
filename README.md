@@ -5,6 +5,9 @@
 # Ricky Jones — execution-boundary engineer
 **AlvianTech**
 
+When an AI system says "yes", something real may happen next: a write, a payment, a message.
+I build and test that moment, and publish small demonstrations you can run yourself, with their limits stated.
+
 I build bounded, inspectable controls at the point of authorisation for AI-supported systems.  
 The objects named below are reference demonstrations, not production enforcement.
 
