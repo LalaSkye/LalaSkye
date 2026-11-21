@@ -5,9 +5,9 @@
 # Ricky Jones
 **AlvianTech**
 
-When an AI system says "yes", something real may happen next: a write, a payment, a message. I build and test controls that check permission before those actions go ahead.
+I build and test software that checks permission before an AI system acts, for example before it updates a record.
 
-[See one write allowed and one refused](#see-what-happens-when-a-write-is-allowed-or-refused)
+[See when a record update is allowed or refused](#see-what-happens-when-a-write-is-allowed-or-refused)
 
 The objects named below are reference demonstrations, not production enforcement.
 
