@@ -2,13 +2,13 @@
   <img src="https://raw.githubusercontent.com/LalaSkye/LalaSkye/main/alviantech-logo.svg" alt="AlvianTech" width="160" />
 </p>
 
-# Ricky Jones — execution-boundary engineer
+# Ricky Jones
 **AlvianTech**
 
-When an AI system says "yes", something real may happen next: a write, a payment, a message.
-I build and test that moment, and publish small demonstrations you can run yourself, with their limits stated.
+When an AI system says "yes", something real may happen next: a write, a payment, a message. I build and test controls that check permission before those actions go ahead.
 
-I build bounded, inspectable controls at the point of authorisation for AI-supported systems.  
+[See one write allowed and one refused](#see-what-happens-when-a-write-is-allowed-or-refused)
+
 The objects named below are reference demonstrations, not production enforcement.
 
 **Public routing status:** Under revalidation. No repository is currently designated as the public starting point.
