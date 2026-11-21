@@ -17,6 +17,17 @@ The objects named below are reference demonstrations, not production enforcement
 
 Public GitHub is an inspection surface. Evidence does not transfer between objects.
 
+## See what happens when a write is allowed or refused
+
+[Inspect the measured-write fixture](https://github.com/LalaSkye/start-here/blob/2b1723b96ac2d73c28d112e17b1c07ed9caa6b91/README.md#measured-mutation-fixture)
+
+This example uses one in-memory record and one tested write path.
+
+- **Authorised example:** The record moved from version 1 to version 2. One write.
+- **Missing-record test:** The record stayed at version 1. The write function was called zero times.
+
+[Inspect the separate missing-record test](https://github.com/LalaSkye/start-here/blob/2b1723b96ac2d73c28d112e17b1c07ed9caa6b91/tests/test_core/test_measured_mutation.py#L124)
+
 ## Three public inspection objects
 
 These are the admitted public inspection class. They remain separately inspectable.
