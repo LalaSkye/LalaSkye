@@ -1,13 +1,11 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/LalaSkye/LalaSkye/main/alviantech-logo.svg" alt="AlvianTech" width="160" />
-</p>
-
 # Ricky Jones
 **AlvianTech**
 
-I build and test software that checks permission before an AI system acts, for example before it updates a record.
+I build and test software that checks permission just before an AI system acts.
 
 [See when a record update is allowed or refused](#see-what-happens-when-a-write-is-allowed-or-refused)
+
+<img src="https://raw.githubusercontent.com/LalaSkye/LalaSkye/main/assets/alviantech-steel-and-silk-wordmark.png" alt="" width="180" />
 
 The objects named below are reference demonstrations, not production enforcement.
 
