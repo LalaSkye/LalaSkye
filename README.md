@@ -7,7 +7,7 @@ I build and test software that checks permission just before an AI system acts.
 
 The objects named below are reference demonstrations, not production enforcement.
 
-**Public routing status:** Under revalidation. No repository is currently designated as the public starting point.
+[Start here with Commit Gate Core](https://github.com/LalaSkye/commit-gate-core/tree/610d155232fbc3f590ed40656e48403ef4d20dcf) — tested preview, pinned to the exact commit. GitHub’s “Latest” badge points to the older `v0.1.1` release.
 
 > **Where does the system physically stop?**
 
