@@ -7,7 +7,11 @@ I build and test software that checks permission just before an AI system acts.
 
 The objects named below are reference demonstrations, not production enforcement.
 
-[Start here with Commit Gate Core](https://github.com/LalaSkye/commit-gate-core/tree/610d155232fbc3f590ed40656e48403ef4d20dcf) — tested preview, pinned to the exact commit. GitHub’s “Latest” badge points to the older `v0.1.1` release.
+**Start with Commit Gate Core.** It checks whether a decision authorises these exact bytes and returns authorisation or refusal without applying the payload.
+
+[Inspect the tested preview](https://github.com/LalaSkye/commit-gate-core/tree/610d155232fbc3f590ed40656e48403ef4d20dcf) · [Run the two checks](https://github.com/LalaSkye/commit-gate-core/blob/9a118ff97fbf68bcd154550c8c5d0fd27b7f0b47/REPRODUCE.md)
+
+GitHub’s **Latest** release, `v0.1.1`, is the earlier callback-capable version.
 
 > **Where does the system physically stop?**
 
