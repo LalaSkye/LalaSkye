@@ -17,6 +17,12 @@ GitHub’s **Latest** release, `v0.1.1`, is the earlier callback-capable version
 
 Public GitHub is an inspection surface. Evidence does not transfer between objects.
 
+### Public inspection and commissioned work
+
+You’re welcome to run the published tests and share what you find. For an independent reproduction, please include the commit SHA, your environment, the commands you ran and the results. The licence in each repository governs reuse of its published materials.
+
+If you’d like a new test, an integration or a review of your own system, let’s agree the scope, fee and what each of us can share before work starts. Access to unpublished implementation details is agreed separately.
+
 ## Three public inspection objects
 
 These are the admitted public inspection class. They remain separately inspectable.
